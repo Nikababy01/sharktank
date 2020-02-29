@@ -102,17 +102,17 @@ const persons = [
     {
         id:'person1',
         name: 'stephen',
-        isDead: false
+        isDead: true
     },
     {
         id:'person1',
         name: 'steven',
-        isDead: false
+        isDead: true
     },
     {
         id:'person1',
         name: 'todd',
-        isDead: false
+        isDead: true
     },
     {
         id:'person1',
@@ -124,4 +124,8 @@ const persons = [
 const getAlivePersons = () => {
     return persons.filter((x) => x.isDead === false);
 };
-export default { getAlivePersons };
+
+const getDeadPersons = () => {
+    return persons.filter((x) => x.isDead === true);
+};
+export default { getAlivePersons, getDeadPersons};
